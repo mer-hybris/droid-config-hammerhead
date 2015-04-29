@@ -1,35 +1,40 @@
-# Feel free to disable non-critical HA parts during devel by commenting out
-# Generated in hadk by executing: cd $ANDROID_ROOT; rpm/helpers/add_new_device.sh
+# Feel free to disable non-critical HA parts during devel by commenting lines out
+# Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
 
 Description: Pattern with packages for hammerhead HW Adaptation
 Name: jolla-hw-adaptation-hammerhead
 Requires:
 - pattern:jolla-hw-adaptation-hybris
 - pattern:jolla-hw-adaptation-hybris-droid-vibrator
+- pattern:jolla-ui-configuration-hammerhead
 
 - droid-hal-hammerhead
-- droid-hal-hammerhead-sailfish-config
 - droid-hal-hammerhead-img-boot
-- droid-hal-hammerhead-pulseaudio-settings
-- droid-hal-hammerhead-policy-settings
 - droid-hal-hammerhead-kernel-modules
-- droid-hal-hammerhead-preinit-plugin
+- droid-config-hammerhead-sailfish
+- droid-config-hammerhead-pulseaudio-settings
+- droid-config-hammerhead-policy-settings
+- droid-config-hammerhead-preinit-plugin
+- droid-hal-version-hammerhead
+
+- pulseaudio-modules-droid
 
 # These need to be per-device due to differing backends (fbdev, eglfs, hwc, ..?)
 - qt5-qtwayland-wayland_egl
 - qt5-qpa-hwcomposer-plugin
 - qtscenegraph-adaptation
 
+# GStreamer v0.10 multimedia support is being deprecated
 #- gstreamer0.10-droidcamsrc
 #- gstreamer0.10-omx
 #- gstreamer0.10-droideglsink
 #- nemo-qtmultimedia-plugins-gstvideotexturebackend
 
+# Add GStreamer v1.0 as standard
 - gstreamer1.0
 - gstreamer1.0-plugins-good
 - gstreamer1.0-plugins-base
 - gstreamer1.0-plugins-bad
-
 - nemo-gstreamer1.0-interfaces
 
 - gstreamer1.0-droid
@@ -60,6 +65,9 @@ Requires:
 - bluez-configs-sailfish
 # hammerhead, grouper, and maguro use this in scripts, so include for all
 - rfkill
+
+# enable device lock and allow to select untrusted software
+- jolla-devicelock-plugin-encsfa
 
 Summary: Jolla HW Adaptation hammerhead
 
