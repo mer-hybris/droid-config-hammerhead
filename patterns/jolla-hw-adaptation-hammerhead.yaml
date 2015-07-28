@@ -69,5 +69,10 @@ Requires:
 # enable device lock and allow to select untrusted software
 - jolla-devicelock-plugin-encsfa
 
+# For 1.1.7 only: provide settings layout for a device with valid GSM modem.
+# Updates after 1.1.7 will autodetect the modem presence during runtime and change
+# layout accordingly
+- jolla-settings-layout
+
 Summary: Jolla HW Adaptation hammerhead
 
