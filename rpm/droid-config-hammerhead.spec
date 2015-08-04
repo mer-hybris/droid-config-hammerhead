@@ -14,6 +14,10 @@
 # We assume most devices will
 %define have_modem 1
 
+%define additional_post_scripts \ 
+  /usr/bin/groupadd-user media_rw || : \
+  %{nil}
+
 Provides: ofono-configs
 %include droid-configs-device/droid-configs.inc
 
