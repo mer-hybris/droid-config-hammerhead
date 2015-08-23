@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+export MROM_PART=/dev/mmcblk0p28
