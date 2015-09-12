@@ -74,6 +74,10 @@ Requires:
 # Updates after 1.1.7 will autodetect the modem presence during runtime and change
 # layout accordingly
 - jolla-settings-layout
+- jolla-sailfish-cellular-apps
+
+# to make the maps happy, works since 1.1.7
+- geoclue-provider-hybris-community
 
 Summary: Jolla HW Adaptation hammerhead
 
