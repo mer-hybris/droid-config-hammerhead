@@ -74,6 +74,8 @@ Requires:
 # Updates after 1.1.7 will autodetect the modem presence during runtime and change
 # layout accordingly
 - jolla-settings-layout
+
+# Since 1.1.9 this needs to be added explicitly for cellular devices
 - jolla-sailfish-cellular-apps
 
 # to make the maps happy, works since 1.1.7
