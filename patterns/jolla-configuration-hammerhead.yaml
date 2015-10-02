@@ -5,7 +5,10 @@ Description: Pattern with packages for hammerhead configurations
 Name: jolla-configuration-hammerhead
 Requires:
 - pattern:jolla-hw-adaptation-hammerhead
-- pattern:jolla-configuration-sfe
+- pattern:jolla-sailfish-applications
+- pattern:jolla-ui-wayland
+# Early stages of porting benefit from these:
+- pattern:sailfish-porter-tools
 # Pre-installed applications, since we don't support OTA well enough:
 - sailfish-office
 - jolla-calculator
