@@ -82,7 +82,7 @@ Requires:
 - telepathy-ring
 
 # to make the maps happy, works since 1.1.7
-- geoclue-provider-hybris-community
+- geoclue-provider-hybris
 
 Summary: Jolla HW Adaptation hammerhead
 
